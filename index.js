@@ -56,11 +56,11 @@ app.post('/upload/pdf', upload.single('pdf'), async (req, res) => {
 });
 
 app.get('/chat', async (req, res) => {
-  const userQuery = req.query.message;
+  const userQuery = 'Why a Chatbot?';
 
-  const embeddings = new OpenAIEmbeddings({
-    model: 'text-embedding-3-small',
-    apiKey: '',
+  const embeddings = new GoogleGenerativeAIEmbeddings({
+    model: 'embedding-001',
+    apiKey: process.env.GOOGLE_API_KEY,
   });
   const vectorStore = await QdrantVectorStore.fromExistingCollection(
     embeddings,
