@@ -1,0 +1,36 @@
+{
+  "name": "server",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "node --watch index.js",
+    "dev:worker": "node --watch worker.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "packageManager": "pnpm@10.28.2",
+  "dependencies": {
+    "@google/generative-ai": "^0.24.1",
+    "@langchain/community": "^1.1.10",
+    "@langchain/core": "^1.1.18",
+    "@langchain/google-genai": "^2.1.14",
+    "@langchain/openai": "^1.2.4",
+    "@langchain/qdrant": "^1.0.1",
+    "@langchain/textsplitters": "^1.0.1",
+    "bullmq": "^5.67.2",
+    "cors": "^2.8.6",
+    "dotenv": "^17.2.3",
+    "express": "^5.2.1",
+    "multer": "^2.0.2",
+    "openai": "^6.17.0",
+    "pdf-parse": "^2.4.5"
+  },
+  "devDependencies": {
+    "@types/express": "^5.0.6",
+    "@types/multer": "^2.0.0",
+    "@types/node": "^25.1.0"
+  }
+}
